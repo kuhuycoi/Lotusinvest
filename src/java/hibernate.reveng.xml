@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-reverse-engineering PUBLIC "-//Hibernate/Hibernate Reverse Engineering DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-reverse-engineering-3.0.dtd">
+<hibernate-reverse-engineering>
+  <schema-selection match-catalog="lotusinvest_db" match-schema="dbo"/>
+  <table-filter match-name="triandot2"/>
+  <table-filter match-name="RankCustomes"/>
+  <table-filter match-name="TransactionHistories"/>
+  <table-filter match-name="Customer"/>
+  <table-filter match-name="ProvincialAgencies"/>
+  <table-filter match-name="RankNow"/>
+  <table-filter match-name="System_Country"/>
+  <table-filter match-name="System_Tag"/>
+  <table-filter match-name="Customer_Type"/>
+  <table-filter match-name="DynamicCustomers"/>
+  <table-filter match-name="CheckAwards"/>
+  <table-filter match-name="System_Menu"/>
+  <table-filter match-name="System_District"/>
+  <table-filter match-name="RankNow_BackUp"/>
+  <table-filter match-name="trian"/>
+  <table-filter match-name="LogSendSMSToCustomer"/>
+  <table-filter match-name="HistoryAwards"/>
+  <table-filter match-name="System_Config"/>
+  <table-filter match-name="System_City"/>
+  <table-filter match-name="Customer_RankCustomer"/>
+  <table-filter match-name="System_MessageTemplate"/>
+  <table-filter match-name="Module"/>
+  <table-filter match-name="Admin"/>
+  <table-filter match-name="PinSys"/>
+</hibernate-reverse-engineering>

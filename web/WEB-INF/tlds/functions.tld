@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<taglib version="2.1" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-jsptaglibrary_2_1.xsd">
+    <tlib-version>1.0</tlib-version>
+    <short-name>functions</short-name>
+    <uri>/WEB-INF/tlds/functions</uri>
+    <function>
+        <name>isZero</name>
+        <function-class>com.resources.function.CustomFunction</function-class>
+        <function-signature>boolean isZero(java.math.BigDecimal)</function-signature>
+    </function>
+    <function>
+        <name>split</name>
+        <function-class>java.CustomFunction</function-class>
+        <function-signature>String split(java.lang.String, java.lang.String)</function-signature>
+    </function>
+    <function>
+        <name>replace</name>
+        <function-class>com.resources.function.CustomFunction</function-class>
+        <function-signature>String replace(java.lang.String, java.lang.String, java.lang.String)</function-signature>
+    </function>
+    <function>
+        <name>equal</name>
+        <function-class>com.resources.function.CustomFunction</function-class>
+        <function-signature>boolean equal(java.lang.String, java.lang.String)</function-signature>
+    </function>
+    <function>
+        <name>equalIgnoreCase</name>
+        <function-class>com.resources.function.CustomFunction</function-class>
+        <function-signature>boolean equalIgnoreCase(java.lang.String, java.lang.String)</function-signature>
+    </function>
+    <function>
+        <name>size</name>
+        <function-class>com.resources.function.CustomFunction</function-class>
+        <function-signature>int size(java.util.Collection)</function-signature>
+    </function>
+    <function>
+        <name>formatCurrency</name>
+        <function-class>com.resources.function.CustomFunction</function-class>
+        <function-signature>String formatCurrency(java.math.BigDecimal)</function-signature>
+    </function>
+    <function>
+        <name>formatPercent</name>
+        <function-class>com.resources.function.CustomFunction</function-class>
+        <function-signature>String formatPercent(java.lang.Integer)</function-signature>
+    </function>
+    <function>
+        <name>formatPercentTwoInput</name>
+        <function-class>com.resources.function.CustomFunction</function-class>
+        <function-signature>String formatPercentTwoInput(java.math.BigDecimal,java.math.BigDecimal)</function-signature>
+    </function>
+    <function>
+        <name>formatTime</name>
+        <function-class>com.resources.function.CustomFunction</function-class>
+        <function-signature>String formatTime(java.util.Date)</function-signature>
+    </function>
+    <function>
+        <name>currentTime</name>
+        <function-class>com.resources.function.CustomFunction</function-class>
+        <function-signature>Date currentTime()</function-signature>
+    </function>
+    <function>
+        <name>addDate</name>
+        <function-class>com.resources.function.CustomFunction</function-class>
+        <function-signature>Date addDate(java.util.Date, java.lang.Integer)</function-signature>
+    </function>
+    <function>
+        <name>compareCurrentDate</name>
+        <function-class>com.resources.function.CustomFunction</function-class>
+        <function-signature>int compareCurrentDate(java.util.Date)</function-signature>
+    </function>
+    <function>
+        <name>checkNameLength</name>
+        <function-class>com.resources.function.CustomFunction</function-class>
+        <function-signature>String checkNameLength(java.lang.String, java.lang.Integer)</function-signature>
+    </function>
+    <function>
+        <name>tranformQuantityToStatus</name>
+        <function-class>com.resources.function.CustomFunction</function-class>
+        <function-signature>String tranformQuantityToStatus(java.lang.Integer)</function-signature>
+    </function>
+    <function>
+        <name>tranformStatus</name>
+        <function-class>com.resources.function.CustomFunction</function-class>
+        <function-signature>String tranformStatus(java.lang.Integer)</function-signature>
+    </function>
+    <function>
+        <name>getTotalMember</name>
+        <function-class>com.resources.function.CustomFunction</function-class>
+        <function-signature>Integer getTotalMember(java.lang.Integer)</function-signature>
+    </function>
+    <function>
+        <name>getTotalProductOfCategory</name>
+        <function-class>com.resources.function.CustomFunction</function-class>
+        <function-signature>Integer getTotalProductOfCategory(java.lang.Integer)</function-signature>
+    </function>
+    <function>
+        <name>getTotalProductOfWarehouse</name>
+        <function-class>com.resources.function.CustomFunction</function-class>
+        <function-signature>Integer getTotalProductOfWarehouse(java.lang.Integer)</function-signature>
+    </function>
+    <function>
+        <name>getOrderTrClass</name>
+        <function-class>com.resources.function.CustomFunction</function-class>
+        <function-signature>String getOrderTrClass(java.lang.Integer)</function-signature>
+    </function>
+    <function>
+        <name>tranformOrderStatus</name>
+        <function-class>com.resources.function.CustomFunction</function-class>
+        <function-signature>String tranformOrderStatus(java.lang.Integer)</function-signature>
+    </function>
+    <function>
+        <name>getTotalPriceOfOrder</name>
+        <function-class>com.resources.function.CustomFunction</function-class>
+        <function-signature>Double getTotalPriceOfOrder(java.lang.Integer)</function-signature>
+    </function>
+    <function>
+        <name>getTotalNewOrder</name>
+        <function-class>com.resources.function.CustomFunction</function-class>
+        <function-signature>Integer getTotalNewOrder()</function-signature>
+    </function>
+    <function>
+        <name>getTotalProductOfOrder</name>
+        <function-class>com.resources.function.CustomFunction</function-class>
+        <function-signature>Integer getTotalProductOfOrder(java.lang.Integer)</function-signature>
+    </function>
+    <function>
+        <name>getTotalRejectionOfOrder</name>
+        <function-class>com.resources.function.CustomFunction</function-class>
+        <function-signature>Integer getTotalRejectionOfOrder(java.lang.Integer)</function-signature>
+    </function>
+    <function>
+        <name>getTotalGatheredProductOfOrder</name>
+        <function-class>com.resources.function.CustomFunction</function-class>
+        <function-signature>Integer getTotalGatheredProductOfOrder(java.lang.Integer)</function-signature>
+    </function>
+    <function>
+        <name>getTotalGatheredProductOfOrderDetail</name>
+        <function-class>com.resources.function.CustomFunction</function-class>
+        <function-signature>Integer getTotalGatheredProductOfOrderDetail(java.lang.Integer,java.lang.Integer)</function-signature>
+    </function>
+    <function>
+        <name>getOrderEntityCountOfMember</name>
+        <function-class>com.resources.function.CustomFunction</function-class>
+        <function-signature>Integer getOrderEntityCountOfMember(java.lang.Integer)</function-signature>
+    </function>
+    <function>
+        <name>getTotalNewFeedback</name>
+        <function-class>com.resources.function.CustomFunction</function-class>
+        <function-signature>Integer getTotalNewFeedback()</function-signature>
+    </function>
+    <function>
+        <name>getJSON</name>
+        <function-class>com.resources.function.CustomFunction</function-class>
+        <function-signature>String getJSON(java.lang.Object)</function-signature>
+    </function>
+    <function>
+        <name>getMulti</name>
+        <function-class>com.resources.function.CustomFunction</function-class>
+        <function-signature>String getMulti(com.entity.Tbluser)</function-signature>
+    </function>
+    <function>
+        <name>filterModuleList</name>
+        <function-class>com.resources.function.CustomFunction</function-class>
+        <function-signature>List filterModuleList(java.util.List,com.resources.entity.Module)</function-signature>
+    </function>
+    <function>
+        <name>filterCustomerList</name>
+        <function-class>com.resources.function.CustomFunction</function-class>
+        <function-signature>List filterCustomerList(java.util.List,com.resources.entity.Customer)</function-signature>
+    </function>
+    <function>
+        <name>findRankNowByCustomer</name>
+        <function-class>com.resources.function.CustomFunction</function-class>
+        <function-signature>RankNow findRankNowByCustomer(com.resources.entity.Customer)</function-signature>
+    </function>
+    <function>
+        <name>findAllAvailableCustomerType</name>
+        <function-class>com.resources.function.CustomFunction</function-class>
+        <function-signature>List findAllAvailableCustomerType()</function-signature>
+    </function>
+    <function>
+        <name>findAllAvailableProvincialAgencies</name>
+        <function-class>com.resources.function.CustomFunction</function-class>
+        <function-signature>List findAllAvailableProvincialAgencies()</function-signature>
+    </function>
+    <function>
+        <name>findAllAvailableRankCustomer</name>
+        <function-class>com.resources.function.CustomFunction</function-class>
+        <function-signature>List findAllAvailableRankCustomer()</function-signature>
+    </function>
+    <function>
+        <name>findAdminById</name>
+        <function-class>com.resources.function.CustomFunction</function-class>
+        <function-signature>Admin findAdminById(java.lang.Integer)</function-signature>
+    </function>
+    <function>
+        <name>findDistributorById</name>
+        <function-class>com.resources.function.CustomFunction</function-class>
+        <function-signature>CustomerNonActive findDistributorById(java.lang.Integer)</function-signature>
+    </function>
+    <function>
+        <name>buildTreeCustomer</name>
+        <function-class>com.resources.function.CustomFunction</function-class>
+        <function-signature>String buildTreeCustomer(java.util.List,java.lang.Integer)</function-signature>
+    </function>
+    <function>
+        <name>findAllHistoryAwardYear</name>
+        <function-class>com.resources.function.CustomFunction</function-class>
+        <function-signature>List findAllHistoryAwardYear()</function-signature>
+    </function>
+</taglib>

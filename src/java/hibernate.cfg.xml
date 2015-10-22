@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+  <session-factory>
+    <property name="hibernate.connection.driver_class">com.microsoft.sqlserver.jdbc.SQLServerDriver</property>
+    <property name="cache.provider_class">org.hibernate.cache.NoCacheProvider</property>
+    <property name="hibernate.connection.url">jdbc:sqlserver://localhost:1433;databaseName=lotusinvest_db</property>
+    <property name="hibernate.connection.username">sa</property>
+    <property name="hibernate.connection.password">123456</property>
+    <property name="show_sql">true</property>
+    <property name="hibernate.current_session_context_class">thread</property>
+    <property name="hibernate.dialect">org.hibernate.dialect.SQLServer2012Dialect</property>
+    <property name="hibernate.globally_quoted_identifiers">true</property>
+    <mapping class="com.resources.entity.SystemConfig"/>
+    <mapping class="com.resources.entity.ProvincialAgencies"/>
+    <mapping class="com.resources.entity.SystemMessageTemplate"/>
+    <mapping class="com.resources.entity.SystemCountry"/>
+    <mapping class="com.resources.entity.SystemDistrict"/>
+    <mapping class="com.resources.entity.DynamicCustomers"/>
+    <mapping class="com.resources.entity.SystemMenu"/>
+    <mapping class="com.resources.entity.RankCustomes"/>
+    <mapping class="com.resources.entity.Customer"/>
+    <mapping class="com.resources.entity.Triandot2"/>
+    <mapping class="com.resources.entity.LogSendSmstoCustomer"/>
+    <mapping class="com.resources.entity.RankNowBackUp"/>
+    <mapping class="com.resources.entity.HistoryAwards"/>
+    <mapping class="com.resources.entity.SystemCity"/>
+    <mapping class="com.resources.entity.CustomerType"/>
+    <mapping class="com.resources.entity.CheckAwards"/>
+    <mapping class="com.resources.entity.SystemTag"/>
+    <mapping class="com.resources.entity.Module"/>
+    <mapping class="com.resources.entity.RankNow"/>
+    <mapping class="com.resources.entity.CustomerRankCustomer"/>
+    <mapping class="com.resources.entity.Trian"/>
+    <mapping class="com.resources.entity.Admin"/>
+    <mapping class="com.resources.entity.PinSys"/>
+    <mapping class="com.resources.entity.TransactionHistories"/>
+    <mapping class="com.resources.bean.CustomerDistributor"/>
+    <mapping class="com.resources.bean.CustomerFromTotalParent"/>
+    <mapping class="com.resources.bean.CustomerNonActive"/>
+    <mapping class="com.resources.bean.CustomerTree"/>
+    <mapping class="com.resources.bean.HistoryCustomerRank"/>
+    <mapping class="com.resources.bean.HistoryAward"/>
+  </session-factory>
+</hibernate-configuration>

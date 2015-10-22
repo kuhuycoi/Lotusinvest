@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:mvc="http://www.springframework.org/schema/mvc" 
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="  
+     http://www.springframework.org/schema/mvc  
+     http://www.springframework.org/schema/mvc/spring-mvc-4.1.xsd  
+     http://www.springframework.org/schema/beans  
+     http://www.springframework.org/schema/beans/spring-beans-4.1.xsd  
+     http://www.springframework.org/schema/context   
+     http://www.springframework.org/schema/context/spring-context-4.1.xsd">
+
+    <context:component-scan base-package="com.resources.controller"/>
+    <!-- Important!! -->
+    <mvc:annotation-driven content-negotiation-manager="contentNegotiationManager"/>
+    <!--<mvc:annotation-driven content-negotiation-manager="contentNegotiationManager"/>-->
+    <mvc:interceptors>
+        <mvc:interceptor>
+            <!-- mapping for page of admin role -->
+            <mvc:mapping path="/Admin/**" />
+            <bean class="com.resources.interceptor.AdminAuthenticationInterceptor"  />
+        </mvc:interceptor>
+        <mvc:interceptor>
+            <mvc:mapping path="/**" />
+            <mvc:exclude-mapping path="/Admin/**"/>
+            <mvc:exclude-mapping path="/Customer/Login"/>
+            <mvc:exclude-mapping path="/Customer/Logout"/>
+            <mvc:exclude-mapping path="/Customer/Register"/>
+            <mvc:exclude-mapping path="/Customer/ResetPassword"/>
+            <mvc:exclude-mapping path="/Customer/ResetPassword"/>
+            <mvc:exclude-mapping path="/Customer/SearchParentId/**"/>
+            <mvc:exclude-mapping path="/Customer/SearchCustomerId/**"/>
+            <mvc:exclude-mapping path="/Home"/>
+            <mvc:exclude-mapping path="/resources/**"/>
+            <bean class="com.resources.interceptor.IndexAuthenticationInterceptor"  />
+        </mvc:interceptor>
+    </mvc:interceptors>
+    <mvc:resources mapping="/resources/**" location="/view/resources/" cache-period="31556926" />  
+    
+    <bean id="matcher" class="com.resources.controller.CaseInsensitivePathMatcher"/>
+
+    <bean class="org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping">
+        <property name="pathMatcher" ref="matcher"/>
+    </bean>
+
+    <bean class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter">
+        <property name="pathMatcher" ref="matcher"/>
+        <property name="webBindingInitializer">
+            <bean class="org.springframework.web.bind.support.ConfigurableWebBindingInitializer"/>
+        </property>
+        <property name="messageConverters">
+            <list>
+                <bean class="org.springframework.http.converter.ByteArrayHttpMessageConverter"/>
+                <bean class="org.springframework.http.converter.StringHttpMessageConverter"/>
+                <bean class="org.springframework.http.converter.FormHttpMessageConverter"/>
+                <bean class="org.springframework.http.converter.xml.SourceHttpMessageConverter"/>
+            </list>
+        </property>
+    </bean>
+    <bean id="conversion-service" class="org.springframework.format.support.FormattingConversionServiceFactoryBean"/>
+    
+    <bean id="contentNegotiationManager" class="org.springframework.web.accept.ContentNegotiationManagerFactoryBean">
+        <property name="favorPathExtension" value="false" />
+    </bean>   
+    
+    <bean id="viewResolver" class="org.springframework.web.servlet.view.UrlBasedViewResolver">
+        <property name="prefix" value="/view/"/>
+        <property name="suffix" value=".jsp"/>
+        <property name="viewClass" value="org.springframework.web.servlet.view.JstlView"/>
+        <property name="order" value="1" />
+    </bean>
+    <bean class="org.springframework.web.servlet.view.XmlViewResolver">
+        <property name="location">
+            <value>/WEB-INF/spring-excel-views.xml</value>
+        </property>
+        <property name="order" value="0" />
+    </bean>
+    <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+        <property name="maxUploadSize" value="250000"/>
+    </bean> 
+</beans>  
